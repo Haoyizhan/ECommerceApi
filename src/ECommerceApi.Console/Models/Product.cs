@@ -1,3 +1,4 @@
+namespace ECommerceApi.Console.Models;
 public class Product
 {
     public int Id { get; set; }

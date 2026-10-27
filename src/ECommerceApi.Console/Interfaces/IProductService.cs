@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using ECommerceApi.Console.Models;
+
+namespace ECommerceApi.Console.Interfaces;
 
 public interface IProductService
 {

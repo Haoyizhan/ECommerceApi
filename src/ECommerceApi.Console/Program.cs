@@ -1,4 +1,10 @@
-﻿IProductService productService = new ProductService();
+﻿using System;
+using System.Linq;
+using ECommerceApi.Console.Interfaces;
+using ECommerceApi.Console.Models;
+using ECommerceApi.Console.Services;
+
+IProductService productService = new ProductService();
 
 productService.AddProduct(new Product
 {
@@ -42,4 +48,40 @@ var searchResults = productService.SearchProduct("key");
 foreach (var product in searchResults)
 {
     Console.WriteLine($"搜尋結果：{product.Name}");
+}
+// 測試 ArgumentException
+try
+{
+    productService.AddProduct(new Product
+    {
+        Name = "",
+        Price = -100,
+        Stock = 5
+    });
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine($"輸入資料錯誤：{ex.Message}");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"未預期的錯誤：{ex.Message}");
+}
+finally
+{
+    Console.WriteLine("新增商品測試結束。");
+}
+
+// 測試 InvalidOperationException
+try
+{
+    var product = productService
+        .GetProducts()
+        .Single(p => p.Id == 999);
+
+    Console.WriteLine(product.Name);
+}
+catch (InvalidOperationException ex)
+{
+    Console.WriteLine($"查詢操作失敗：{ex.Message}");
 }
