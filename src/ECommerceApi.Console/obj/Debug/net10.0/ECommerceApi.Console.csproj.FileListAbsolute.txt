@@ -1,0 +1,15 @@
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\bin\Debug\net10.0\ECommerceApi.Console.exe
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\bin\Debug\net10.0\ECommerceApi.Console.deps.json
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\bin\Debug\net10.0\ECommerceApi.Console.runtimeconfig.json
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\bin\Debug\net10.0\ECommerceApi.Console.dll
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\bin\Debug\net10.0\ECommerceApi.Console.pdb
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ECommerceApi.Console.GeneratedMSBuildEditorConfig.editorconfig
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ECommerceApi.Console.AssemblyInfoInputs.cache
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ECommerceApi.Console.AssemblyInfo.cs
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ECommerceApi.Console.csproj.CoreCompileInputs.cache
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ECommerceApi.Console.sourcelink.json
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ECommerceApi.Console.dll
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\refint\ECommerceApi.Console.dll
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ECommerceApi.Console.pdb
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ECommerceApi.Console.genruntimeconfig.cache
+D:\Backend\EcommerceApi\src\ECommerceApi.Console\obj\Debug\net10.0\ref\ECommerceApi.Console.dll

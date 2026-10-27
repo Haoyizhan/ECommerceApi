@@ -1,42 +1,70 @@
-public class ProductService
-{
-    private List<Product> products = new List<Product>();
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
+public class ProductService : IProductService
+{
+    private readonly List<Product> _products = new();
+    private int _nextId = 1;
+
+    // 新增商品
     public void AddProduct(Product product)
     {
-        // 新增
+        product.Id = _nextId;
+        _nextId++;
+
+        _products.Add(product);
     }
 
+    // 查詢單筆商品
     public Product? GetProduct(int id)
     {
-        // 查詢單筆
-        return products.FirstOrDefault(x => x.Id == id);
+        return _products.FirstOrDefault(p => p.Id == id);
     }
 
+    // 查詢所有商品
     public List<Product> GetProducts()
     {
-        // 查詢全部
-        return products;
+        return _products.ToList();
     }
 
-    public void UpdateProduct(Product product)
+    // 修改商品
+    public bool UpdateProduct(Product product)
     {
-        // 修改
+        var existingProduct = GetProduct(product.Id);
+
+        if (existingProduct == null)
+        {
+            return false;
+        }
+
+        existingProduct.Name = product.Name;
+        existingProduct.Price = product.Price;
+        existingProduct.Stock = product.Stock;
+
+        return true;
     }
 
-    public void DeleteProduct(int id)
+    // 刪除商品
+    public bool DeleteProduct(int id)
     {
-        // 刪除
+        var product = GetProduct(id);
+
+        if (product == null)
+        {
+            return false;
+        }
+
+        return _products.Remove(product);
     }
 
+    // 搜尋商品
     public List<Product> SearchProduct(string keyword)
     {
-        var result = products
-            .Where(x => x.Name.Contains(
+        return _products
+            .Where(p => p.Name.Contains(
                 keyword,
                 StringComparison.OrdinalIgnoreCase))
             .ToList();
-
-        return result;
     }
 }
